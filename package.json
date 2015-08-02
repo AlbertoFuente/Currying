@@ -1,0 +1,29 @@
+{
+  "name": "Currying",
+  "version": "1.0.0",
+  "description": "Currying in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlbertoFuente/Currying.git"
+  },
+  "author": "Alberto de la Fuente",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlbertoFuente/Currying/issues"
+  },
+  "homepage": "https://github.com/AlbertoFuente/Currying",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-karma": "0.0.4",
+    "gulp-watch": "^4.3.4",
+    "jasmine": "^2.3.1",
+    "karma": "^0.13.3"
+  },
+  "dependencies": {
+    "requirejs": "^2.1.20"
+  }
+}
