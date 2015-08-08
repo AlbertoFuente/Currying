@@ -16,9 +16,7 @@ gulp.task('tests', function() {
 gulp.task('watch', function() {
     'use strict';
 
-    gulp.watch([
-        'js/curry.js', 'test/spec.js'
-    ], function() {
+    gulp.watch(testFiles, function() {
         gulp.start('tests');
     });
 });
