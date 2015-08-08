@@ -1,9 +1,10 @@
 (function() {
     'use strict';
+    var curryFn = {};
     /* First we need the curry function
         expects a function as its argument
         */
-    function curry(fn) {
+    curryFn.curry = function(fn) {
         // Variable with the arguments length
         argsLength = fn.length;
 
@@ -20,5 +21,7 @@
                 return next.apply(null, localArgs);
             };
         }());
-    }
+    };
+
+    return curryFn;
 }());
