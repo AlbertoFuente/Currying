@@ -21,7 +21,12 @@
     "gulp-karma": "0.0.4",
     "gulp-watch": "^4.3.4",
     "jasmine": "^2.3.1",
-    "karma": "^0.13.3"
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.3",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.6",
+    "karma-spec-reporter": "0.0.20"
   },
   "dependencies": {
     "requirejs": "^2.1.20"
