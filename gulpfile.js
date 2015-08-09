@@ -1,16 +1,12 @@
 var gulp = require('gulp'),
-    karma = require('gulp-karma'),
+    Server = require('karma').Server,
     testFiles = ['js/curry.js', 'test/spec.js'];
 
 gulp.task('tests', function() {
-    gulp.src(testFiles)
-        .pipe(karma({
-            configFile: 'karma.conf.js',
-            action: 'run'
-        }))
-        .on('error', function(err) {
-            throw err;
-        });
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }).start();
 });
 
 gulp.task('watch', function() {
