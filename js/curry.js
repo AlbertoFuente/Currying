@@ -1,10 +1,11 @@
-var curryFn = {
-    /* First we need the curry function
-        expects a function as its argument
-        */
-    curry: function(fn) {
+    /**
+     * First we need the curry function inside the prototype of Function Class
+     * @return {[type]} [description]
+     */
+    Function.prototype.curry = function() {
         // Variable with the arguments length
-        argsLength = fn.length;
+        var argsLength = this.length,
+            self = this;
 
         return (function resolver() {
             // variable with the copy of the arguments received
@@ -15,9 +16,8 @@ var curryFn = {
                 var localArgs = argsReceived.slice();
                 Array.prototype.push.apply(localArgs, arguments);
                 // compare the length of arguments we’ve received with the argsLength of our curried function
-                var next = localArgs.length >= argsLength ? fn : resolver;
+                var next = localArgs.length >= argsLength ? self : resolver;
                 return next.apply(null, localArgs);
             };
         }());
-    }
-};
+    };
